@@ -1,0 +1,18 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-inverse">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Graduation Photo</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active"><a href="/">Home</a></li>
+      <li routerLinkActive="active" *ngIf="isLoggedIn"><a routerLink="/allposts">All Posts</a></li>
+      <li routerLinkActive="active" *ngIf="isLoggedIn"><a routerLink="/favorities">Favorites</a></li>
+      <li routerLinkActive="active" *ngIf="isLoggedIn"><a routerLink="/myposts">My Post</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
+      <li routerLinkActive="active"><a routerLink="/signup">Sign up</a></li>
+      <li routerLinkActive="active" *ngIf="isLoggedIn"><a routerLink="/logout">Log out</a></li>
+    </ul>
+  </div>
+</nav>
