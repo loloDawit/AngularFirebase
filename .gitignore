@@ -44,4 +44,4 @@ testem.log
 Thumbs.db
 
 # firebase data
-*app.component.ts
+/src/app/*app.component
