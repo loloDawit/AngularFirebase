@@ -14,6 +14,11 @@ import { FollowingComponent } from './following/following.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule} from "@angular/forms"
 import { RouteGuard } from './auth/route-guard';
+import { NotificationComponent } from './notification/notification.component';
+import { NotificationService } from './shared/notification.service';
+import { FirebaseService } from './shared/firebase.service';
+import { UserService } from './shared/user.service';
+import { PostComponent } from './shared/post/post.component';
 
 
 @NgModule({
@@ -26,14 +31,16 @@ import { RouteGuard } from './auth/route-guard';
     SignInComponent,
     SignUpComponent,
     HomeComponent,
-    FollowingComponent
+    FollowingComponent,
+    NotificationComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [RouteGuard],
+  providers: [RouteGuard, NotificationService,FirebaseService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
